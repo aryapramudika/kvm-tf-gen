@@ -74,4 +74,21 @@ terraform plan
 terraform apply -auto-approve
 ```
 
+### SSH Access
+The script generates an SSH configuration file to simplify SSH access to the VMs. The default path for this file is ./ssh-config, but you can specify a custom path using the -f option.
 
+```bash
+ssh -F $(PWD)/ssh-config myvm-0
+```
+
+To use the SSH configuration file:
+
+```bash
+ssh -F /custom/path/ssh-config myvm-0
+```
+
+#### Files Generated
+* main.tf: Terraform configuration file.
+* cloud-init/user_data.yaml: Cloud-init user data file.
+* cloud-init/network_config.yaml: Cloud-init network configuration file.
+* ssh-config: SSH configuration file (path can be customized).
