@@ -2,6 +2,10 @@
 
 This repository contains a bash script `gen_tf.sh` to automate the generation of Terraform configuration files and cloud-init configuration files for provisioning multiple VMs with customized settings using libvirt.
 
+Terraform provider used:
+
+[Teraform-Provider-Libvirt](https://github.com/dmacvicar/terraform-provider-libvirt)
+
 ## Features
 
 - Create multiple VMs with customized configurations.
