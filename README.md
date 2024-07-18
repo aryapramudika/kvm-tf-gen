@@ -42,7 +42,7 @@ This repository contains a bash script `gen_tf.sh` to automate the generation of
 
     ```bash
     vim gen_tf.sh
-    ./gen_tf.sh
+    ./gen_tf.sh -k "SSH public key (required)"
     ```
 
 ### Options
@@ -64,3 +64,14 @@ This repository contains a bash script `gen_tf.sh` to automate the generation of
 
 ```bash
 ./gen_tf.sh -c 5 -b myvm -i /path/to/cloud-image.img -p mypool -d 50 -s "192.168.122.201,192.168.122.202,192.168.122.203,192.168.122.204,192.168.122.205" -n custom_network -u 2 -m 2048 -k "ssh-rsa AAAAB3NzaC1yc2EAAAABIwAAAQEArF4..." -f /custom/path/ssh-config
+```
+
+### Run Terraform
+
+```bash
+terraform init
+terraform plan
+terraform apply -auto-approve
+```
+
+
